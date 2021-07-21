@@ -1,5 +1,5 @@
 {
-  "name": "mysetup-nodejs",
+  "name": "rocketq",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "express-async-errors": "^3.1.1"
+    "express-async-errors": "^3.1.1",
+    "node-sass": "^5.0.0"
   }
 }
