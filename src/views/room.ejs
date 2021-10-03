@@ -27,7 +27,7 @@
       </a>
 
       <div class="buttons">
-        <div class="button outlined">
+        <div class="button outlined" id="room-id" data-id="323243">
           #323243
           <img src="images/copy.svg" alt="Copiar número da sala" />
         </div>
@@ -71,11 +71,11 @@
             </div>
 
             <div class="actions">
-              <a href="#" class="check">
+              <a href="#" class="check" data-id="2">
                 <img src="images/check.svg" alt="Check" />
                 Marcar como lida
               </a>
-              <a href="#" class="delete">
+              <a href="#" class="delete" data-id="2">
                 <img src="images/trash.svg" alt="Lixeira" />
                 Excluir
               </a>
@@ -93,11 +93,33 @@
             </div>
 
             <div class="actions">
-              <a href="#" class="check">
+              <a href="#" class="check" data-id="3">
                 <img src="images/check.svg" alt="Check" />
                 Marcar como lida
               </a>
-              <a href="#" class="delete">
+              <a href="#" class="delete" data-id="3">
+                <img src="images/trash.svg" alt="Lixeira" />
+                Excluir
+              </a>
+            </div>
+          </div>
+
+          <div class="question-card">
+            <div class="question-content">
+              <div class="user">
+                <img src="images/user.svg" alt="Avatar" />
+              </div>
+              <div class="question">
+                <p>Qual a diferença entre const, var e let no JavaScript?</p>
+              </div>
+            </div>
+
+            <div class="actions">
+              <a href="#" class="check" data-id="4">
+                <img src="images/check.svg" alt="Check" />
+                Marcar como lida
+              </a>
+              <a href="#" class="delete" data-id="4">
                 <img src="images/trash.svg" alt="Lixeira" />
                 Excluir
               </a>
@@ -115,9 +137,9 @@
             </div>
 
             <div class="actions">
-              <a href="#" class="check">
-                <img src="images/check.svg" alt="Check" />
-                Pergunta lida
+              <a href="#" class="delete" data-id="1">
+                <img src="images/trash.svg" alt="Lixeira" />
+                Excluir
               </a>
             </div>
           </div>
@@ -132,17 +154,20 @@
       <h2>Excluir pergunta</h2>
       <p>Tem certeza que você deseja excluir esta pergunta?</p>
 
-      <form action="">
+      <form action="#" method="POST">
         <label forId="password" class="sr-only">Digite sua senha admin</label>
         <input type="password" name="password" id="password" placeholder="Digite sua senha" />
 
         <div class="buttons">
-          <div class="button gray">Cancelar</div>
+          <div class="button gray cancel">Cancelar</div>
           <button class="red">Sim, excluir</button>
         </div>
       </form>
     </div>
   </div>
+
+  <!-- Scripts -->
+  <script src="scripts/main.js" defer type="module"></script>
 </body>
 
 </html>
