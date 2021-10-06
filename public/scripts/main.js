@@ -53,5 +53,5 @@ function handleModalClick(event, check = true) {
   const questionId = event.target.dataset.id;
   const slug = check ? 'check' : 'delete';
 
-  form.setAttribute('action', `/room/${roomId}/${questionId}/${slug}`);
+  form.setAttribute('action', `/question/${roomId}/${questionId}/${slug}`);
 }

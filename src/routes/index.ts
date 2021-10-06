@@ -1,25 +1,31 @@
 import { Request, Response, Router } from 'express';
 
+import { QuestionsController } from '../controllers/QuestionsController';
+import { RoomsController } from '../controllers/RoomsController';
+
 const routes = Router();
 
-routes.get('/', (_: Request, response: Response) => {
-  return response.render('index');
-});
+const questionsController = new QuestionsController();
+const roomsController = new RoomsController();
 
-routes.get('/room', (_: Request, response: Response) => {
-  return response.render('room');
+// Page's
+routes.get('/', (_: Request, response: Response) => {
+  return response.render('index', { page: 'enter-room' });
 });
 
 routes.get('/create-room', (_: Request, response: Response) => {
-  return response.render('create-room');
+  return response.render('index', { page: 'create-room' });
 });
 
+routes.get('/room/:roomId', (_: Request, response: Response) => {
+  return response.render('room');
+});
+
+// Question's controller
 // Format that the form within the modal must pass for the information
-// routes.get(
-//   '/room/:room_id/:question_id/:action',
-//   (request: Request, response: Response) => {
-//     return response.render('example', { request });
-//   },
-// );
+routes.post('/question/:roomId/:questionId/:action', questionsController.index);
+
+// Room's controller
+routes.post('/create-room', roomsController.create);
 
 export { routes };
