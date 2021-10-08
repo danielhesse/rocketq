@@ -14,6 +14,7 @@ const initDatabase = {
     await database.exec(`
       CREATE TABLE IF NOT EXISTS questions (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
+        roomId INT,
         title TEXT,
         read INT
       )

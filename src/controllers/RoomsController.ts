@@ -37,9 +37,21 @@ class RoomsController {
   }
 
   async open(request: Request, response: Response): Promise<void> {
+    const db = await Database();
+
     const { roomId } = request.params;
 
-    return response.render('room', { roomId });
+    const questions = await db.all(
+      `SELECT * FROM questions WHERE roomId = ${roomId} and read = 0`,
+    );
+
+    const questionsRead = await db.all(
+      `SELECT * FROM questions WHERE roomId = ${roomId} and read = 1`,
+    );
+
+    await db.close();
+
+    return response.render('room', { roomId, questions, questionsRead });
   }
 }
 

@@ -17,13 +17,15 @@ routes.get('/create-room', (_: Request, response: Response) => {
   return response.render('index', { page: 'create-room' });
 });
 
-routes.get('/room/:roomId', roomsController.open);
-
 // Question's controller
 // Format that the form within the modal must pass for the information
 routes.post('/question/:roomId/:questionId/:action', questionsController.index);
 
+routes.post('/question/create/:roomId', questionsController.create);
+
 // Room's controller
 routes.post('/create-room', roomsController.create);
+
+routes.get('/room/:roomId', roomsController.open);
 
 export { routes };
