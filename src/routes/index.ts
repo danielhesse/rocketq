@@ -28,4 +28,6 @@ routes.post('/create-room', roomsController.create);
 
 routes.get('/room/:roomId', roomsController.open);
 
+routes.post('/enter-room', roomsController.enter);
+
 export { routes };

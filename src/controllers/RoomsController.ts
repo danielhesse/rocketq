@@ -53,6 +53,12 @@ class RoomsController {
 
     return response.render('room', { roomId, questions, questionsRead });
   }
+
+  async enter(request: Request, response: Response): Promise<void> {
+    const { roomId } = request.body;
+
+    return response.redirect(`/room/${roomId}`);
+  }
 }
 
 export { RoomsController };
