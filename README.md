@@ -1,55 +1,55 @@
-## MySetup NodeJS
+## RocketQ
 ![Badge](https://img.shields.io/static/v1?label=DH&message=DOSOMETHINGGREAT&color=0070f3&style=<0070f3>&logo=rocket)
 
-### Description
+### Projeto
 
-This is my basic configuration of nodejs projects with express, using code patterns like ESLint, Prettier and EditorConfig.
+O Rocket.Q é uma aplicação de interação através de perguntas, sendo possível criar uma sala para internautas anônimos fazerem perguntas e o criador da sala em posse de uma senha gerenciar essas perguntas e marcar como lidas.
 
-### Techs
+### Tecnologias
 
 - [Node.js](https://nodejs.org/en/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Express](https://expressjs.com/pt-br/)
 
-### Code Standards
+### Padrões de Código
 
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 - [EditorConfig](https://editorconfig.org/)
 
-### Getting Started
+### Requisitos básicos
 
-Before you begin, you will need to have the following tools installed on your machine:
+Antes de começar, você precisará ter as seguintes ferramentas instaladas em sua máquina:
 - [Git](https://git-scm.com)
 
-The project can be built with npm or yarn, so choose one of the approach bellow in case you don't have any installed on your system.
+O projeto pode ser construído com npm ou yarn, então escolha uma das abordagens abaixo caso você não tenha nenhum instalado em seu sistema.
 
-Npm is distributed with Node.js which means that when you download Node.js, you automatically get npm installed on your computer
-- [Node.js v14.16.0](https://nodejs.org/) or heigher.
+O Npm é distribuído com o Node.js, o que significa que quando você faz o download do Node.js, o npm é instalado automaticamente no seu computador
+- [Node.js v14.16.0](https://nodejs.org/) ou maior.
 
-Yarn is a package manager built by Facebook Team and seems to be faster than npm in general.
-- [Yarn v1.22.5](https://yarnpkg.com/) or heigher.
+Yarn é um gerenciador de pacotes criado pela equipe do Facebook e parece ser mais rápido do que o npm em geral.
+- [Yarn v1.22.5](https://yarnpkg.com/) ou maior.
 
-Also, it’s good to have an editor to work with the code like [VSCode](https://code.visualstudio.com/).
+Além disso, é bom ter um editor para trabalhar com o código, como [VSCode](https://code.visualstudio.com/).
 
-### :information_source: How to run
+### :information_source: Como executar
 
-Follow the instructions below to download and use the project from this repository:
+Siga as instruções abaixo para baixar e usar o projeto deste repositório:
 
 ```bash
-# Clone this repository using SSH
-$ git clone git@github.com:daniel21h/mysetup-nodejs.git
-# or clone using https
-$ git clone https://github.com/daniel21h/mysetup-nodejs.git
+# Clone este repositório usando SSH
+$ git clone git@github.com:danielhessell/rocketq.git
+# ou clone usando https
+$ git clone https://github.com/danielhessell/rocketq.git
 
-# Go into the repository
-$ cd mysetup-node
+# Vá para o repositório
+$ cd rocketq
 
-# Install dependencies
+# Instale as dependências
 $ yarn
 
-# Run project
-$ yarn dev:server
+# Executar projeto
+$ yarn dev
 ```
 
 ---

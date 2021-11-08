@@ -49,9 +49,19 @@ class RoomsController {
       `SELECT * FROM questions WHERE roomId = ${roomId} and read = 1`,
     );
 
+    let hasQuestions = true;
+    if (questions.length === 0 && questionsRead.length === 0) {
+      hasQuestions = false;
+    }
+
     await db.close();
 
-    return response.render('room', { roomId, questions, questionsRead });
+    return response.render('room', {
+      roomId,
+      questions,
+      questionsRead,
+      hasQuestions,
+    });
   }
 
   async enter(request: Request, response: Response): Promise<void> {
